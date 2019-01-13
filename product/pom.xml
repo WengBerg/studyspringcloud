@@ -64,6 +64,12 @@
             <name>Spring Milestones</name>
             <url>https://maven.aliyun.com/repository/spring</url>
         </repository>
+        <repository>
+            <id>spring-plugin</id>
+            <name>Spring Plugin</name>
+            <url>
+                https://maven.aliyun.com/repository/spring-plugin</url>
+        </repository>
     </repositories>
 
 </project>

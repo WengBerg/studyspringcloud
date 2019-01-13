@@ -1,4 +1,4 @@
-package com.studyspringcloud.order.controller.config;
+package com.studyspringcloud.order.config;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;

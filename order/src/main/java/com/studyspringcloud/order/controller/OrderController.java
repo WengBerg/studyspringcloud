@@ -20,6 +20,9 @@ public class OrderController {
     @Autowired
     private RestTemplate restTemplate;
 
+    @Autowired
+    private OrderClient orderClient;
+
     /**
      * RestTemplate的第一种用法，写死调用链接
      * @return
@@ -52,5 +55,12 @@ public class OrderController {
     public String testOrder3() {
         String s = restTemplate.getForObject("http://product/product/test", String.class);
         return s;
+    }
+
+    @GetMapping("productMsg")
+    public String productMsg() {
+        String msg = orderClient.msg();
+        return msg;
+
     }
 }

@@ -12,4 +12,9 @@ public class ProductController {
     public String testCreate() {
         return "testProduct";
     }
+
+    @GetMapping("msg")
+    public String msg() {
+        return "feign";
+    }
 }
