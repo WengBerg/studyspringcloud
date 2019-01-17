@@ -10,7 +10,7 @@ public class ProductController {
 
     @GetMapping("test")
     public String testCreate() {
-        return "testProduct";
+        return "testProduct9001";
     }
 
     @GetMapping("msg")

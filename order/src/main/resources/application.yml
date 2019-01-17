@@ -6,4 +6,7 @@ spring:
   application:
     name: oeder
 server:
-  port: 9001
+  port: 9500
+product:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
