@@ -3,12 +3,28 @@ eureka:
     service-url:
       defaultZone: http://localhost:8000/eureka/
 spring:
+  rabbitmq: # 这里使用的是 rabbitmq，用于通知更新
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
   application:
     name: config
   cloud:
     config:
       server:
-        git:
-          uri:
+#        这里采用的是git的配置中心，也可以使用是svn的
+       git:
+          uri: https://github.com/WengBerg/studyspringcloud-config-repo.git
           username:
           password:
+#            本地保存地址
+          basedir: E:/ideaIU-2018.2.4.win/workspace/studyspringcloud/config/basedir
+
+server:
+  port: 8899
+management: # 这里是将映射暴露出来
+  endpoints:
+    web:
+      exposure:
+        include: "*"
