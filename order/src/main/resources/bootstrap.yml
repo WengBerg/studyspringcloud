@@ -10,5 +10,10 @@ spring:
       discovery:
         enabled: true
         service-id: config
+#    stream:
+#      bindings:
+#        myStreamMsg:
+#          group: one
+#          Content-Type: text/plain
 server:
   port: 9500
