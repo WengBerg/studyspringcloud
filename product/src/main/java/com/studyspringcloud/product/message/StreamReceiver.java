@@ -28,8 +28,8 @@ public class StreamReceiver {
         logger.info("receive:{}",  dateFormat.format(date));
     }*/
 
-    @StreamListener(value = "myStreamMsg")
-    @SendTo(value = "returnMsg")
+    @StreamListener(StreamClient.MSG)  // 监听消费消息队列
+    @SendTo(StreamClient.RETURN_MSG) // 返回的消息队列
     public String  receive2(Person p) {
         logger.info("name:{}",p.getName());
         logger.info("sex:{}",p.getSex());

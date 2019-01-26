@@ -14,7 +14,7 @@ spring:
     stream:
       bindings:
         myStreamMsg:
-          group: one
+          group: one # 如果这里不定义分组，就会出现多个实例重复消费的问题
 server:
   port: 9000
 

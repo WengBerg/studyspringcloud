@@ -10,10 +10,13 @@ import org.springframework.messaging.SubscribableChannel;
  */
 public interface StreamClient {
 
-    @Input("myStreamMsg")
+    String MSG = "myStreamMsg";
+
+    String RETURN_MSG = "returnMsg";
+    @Input(MSG)
     SubscribableChannel input();
 
-    @Output("returnMsg")
+    @Output(RETURN_MSG)
     MessageChannel output();
 
 }
