@@ -10,9 +10,9 @@ import org.springframework.messaging.SubscribableChannel;
  */
 public interface StreamClient {
 
-    String MSG = "myStreamMsg";
+    String MSG = "myStreamMsg";  // 消费消息队列
 
-    String RETURN_MSG = "returnMsg";
+    String RETURN_MSG = "returnMsg"; // 返回队列
     @Input(MSG)
     SubscribableChannel input();
 
