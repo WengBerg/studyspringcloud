@@ -12,8 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
 
+/*
+这里采用的 controoller 的方式来测试发送消息
+ */
 @RestController
-@EnableBinding(StreamClient.class)
+@EnableBinding(StreamClient.class)  // 这里必须要绑定接口，否者就会启动报错，查找不到 streamClient
 public class StreamSenderController {
 
     @Autowired
@@ -35,11 +38,11 @@ public class StreamSenderController {
         Person person = new Person();
         person.setName("Berg");
         person.setSex("man");
-        streamClient.output().send(MessageBuilder.withPayload(person).build());
+        streamClient.output().send(MessageBuilder.withPayload(person).build()); // 发送消息
     }
 
-    @StreamListener(value = "returnMsg")
+    @StreamListener(value = StreamClient.RETURN_MSG)
     public void returnMsg(String msg) {
         System.out.println("reurn message:"+msg);
-    }
+    } // 消费消息后的返回
 }

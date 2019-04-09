@@ -28,7 +28,7 @@ public class MySender extends OrderApplicationTests {
     }
 
     /*
-    测试服务1.发送
+    测试服务2.发送
      */
     @Test
     public void send2() {

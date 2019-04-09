@@ -10,9 +10,13 @@ import org.springframework.messaging.SubscribableChannel;
  * 使用 stream 首先定义一个接口
  */
 public interface StreamClient {
-    @Output("myStreamMsg")
+
+    String MSG = "myStreamMsg"; //发送消息的队列名称
+
+    String RETURN_MSG = "returnMsg"; //消费消息成功返回消息的队列名称
+    @Output(MSG)
     MessageChannel output();
 
-    @Input("returnMsg")
+    @Input(RETURN_MSG)
     SubscribableChannel input();
 }
