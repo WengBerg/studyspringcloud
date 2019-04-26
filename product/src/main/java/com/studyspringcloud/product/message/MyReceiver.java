@@ -6,7 +6,7 @@ import org.springframework.amqp.rabbit.annotation.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class MyReceiver {
     private final Logger logger = LoggerFactory.getLogger(MyReceiver.class);
 
@@ -45,5 +45,6 @@ public class MyReceiver {
     ))
     public void recevice2(String msg) {
         logger.info("receive server2:{}",msg);
+
     }
 }

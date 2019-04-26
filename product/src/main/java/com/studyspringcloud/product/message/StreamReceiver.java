@@ -12,8 +12,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-@Component
-@EnableBinding(StreamClient.class)
+//@Component
+//@EnableBinding(StreamClient.class)
 public class StreamReceiver {
     private final Logger logger = LoggerFactory.getLogger(StreamReceiver.class);
 

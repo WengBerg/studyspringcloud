@@ -3,18 +3,18 @@ eureka:
     service-url:
       defaultZone: http://127.0.0.1:8000/eureka/
 spring:
-  rabbitmq:
-    host: 127.0.0.1
-    username: guest
-    password: guest
-    port: 5672
+#  rabbitmq:
+#    host: 127.0.0.1
+#    username: guest
+#    password: guest
+#    port: 5672
   application:
     name: product
-  cloud:
-    stream:
-      bindings:
-        myStreamMsg:
-          Content-Type: text/plain
+#  cloud:
+#    stream:
+#      bindings:
+#        myStreamMsg:
+#          Content-Type: text/plain
 #          group: one # 如果这里不定义分组，就会出现多个实例重复消费的问题
 server:
   port: 9000
